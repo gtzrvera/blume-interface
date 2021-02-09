@@ -14,3 +14,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  h1 {
+    font-weight: lighter;
+    color: #036F73;
+    border-bottom: 5px solid #036F73;
+    padding: 10px 0px;
+  }
+</style>
