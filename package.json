@@ -1,12 +1,15 @@
 {
   "name": "blume-interface",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
+  "description": " Vue interface for the Blume API",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "author": "Vicente Gutiérrez",
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.6.0",
     "core-js": "^3.6.5",
