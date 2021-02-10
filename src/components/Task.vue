@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div v-on:click="toggleDetails" class="card">
     <div class="card-body">
       <div class="d-inline-block custom-control custom-checkbox">
         <input
@@ -13,16 +13,27 @@
       <h5
         v-bind:class="{ completed: isCompleted }"
         class="d-inline-block card-title">{{ task.name }}</h5>
+      
+      <TaskDetails
+        v-if="showDetails"
+        :task="task"
+        ></TaskDetails>
     </div>
   </div>
 </template>
 
 <script>
+import TaskDetails from './TaskDetails.vue';
+
 export default {
   name: 'Task',
+  components: {
+    TaskDetails
+  },
   data () {
     return {
-      isCompleted: false
+      isCompleted: false,
+      showDetails: false
     }
   },
   props: {
@@ -34,6 +45,11 @@ export default {
   computed: {
     inputName () {
       return `completed_${this.task.id}`;
+    }
+  },
+  methods: {
+    toggleDetails () {
+      this.showDetails = !this.showDetails;
     }
   }
 }

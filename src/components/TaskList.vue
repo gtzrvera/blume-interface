@@ -18,9 +18,21 @@ export default {
   data () {
     return {
       tasks: [
-        { id: 1, name: 'Buy milk' },
-        { id: 2, name: 'Taking the dog for a walk' },
-        { id: 3, name: 'Call mom' }
+        {
+          id: 1,
+          name: 'Buy milk',
+          description: 'Buy milk to make a delicious cake on the weekend'
+        },
+        {
+          id: 2,
+          name: 'Taking the dog for a walk',
+          description: 'Do not forget to bring the ball to play with Chicles'
+        },
+        {
+          id: 3,
+          name: 'Call mom',
+          description: 'Congratulate her on her birthday and tell her that on Friday afternoon we will go to dinner '
+        }
       ]
     }
   }
